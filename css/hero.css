@@ -1,0 +1,82 @@
+/* Hero Section Styles */
+.hero {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(to bottom right, #eef2ff, var(--white));
+    border-radius: 0 0 0 10rem;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 32rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image img {
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1em;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 60%;
+}
+
+.about-text div {
+    padding: 2rem 0;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}

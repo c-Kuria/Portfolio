@@ -1,0 +1,123 @@
+/* Global Styles */
+:root {
+  /* Light theme variables */
+  --primary-color: #4f46e5;
+  --primary-dark: #4338ca;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --bg-light: #f9fafb;
+  --accent-color: #e74c3c;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --secondary-color: #2c3e50;
+  --white: #ffffff;
+  --card-background: #f8f9fa;
+  --max-width: 1280px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition-speed: 0.3s;
+  --bg-primary: var(--white);
+  --bg-secondary: var(--bg-light);
+  --border-color: #e5e7eb;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: var(--white);
+  --footer-bg: #1f2937;
+  --footer-text: #9ca3af;
+  --footer-border: #374151;
+}
+
+[data-theme="dark"] {
+  /* Dark theme variables */
+  --primary-color: #818cf8; /* Softer blue for dark mode */
+  --primary-dark: #4f46e5;
+  --text-dark: #f3f4f6; /* Light text for contrast */
+  --text-light: #d1d5db;
+  --bg-light: #111827; /* Main dark background */
+  --accent-color: #e74c3c; /* Same accent as light mode */
+  --background-color: #1f2937;
+  --text-color: #d1d5db;
+  --secondary-color: #374151;
+  --white: #1f2937; /* Used as "white" in dark mode */
+  --card-background: #1e293b;
+  --max-width: 1280px;
+  --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1),
+    0 2px 4px -1px rgba(255, 255, 255, 0.06);
+  --transition-speed: 0.3s;
+  --bg-primary: var(--background-color);
+  --bg-secondary: #1e293b;
+  --border-color: #374151;
+  --header-bg: rgba(31, 41, 55, 0.9);
+  --card-bg: var(--card-background);
+  --footer-bg: #0f172a;
+  --footer-text: #6b7280;
+  --footer-border: #1e293b;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.button-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.button-secondary {
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+}
+
+.button-secondary:hover {
+  border-color: var(--text-light);
+  background-color: var(--bg-secondary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
